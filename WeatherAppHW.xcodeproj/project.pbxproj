@@ -13,6 +13,8 @@
 		418B2E8B2801BC7D00F8CC74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 418B2E892801BC7D00F8CC74 /* Main.storyboard */; };
 		418B2E8D2801BC7E00F8CC74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 418B2E8C2801BC7E00F8CC74 /* Assets.xcassets */; };
 		418B2E902801BC7E00F8CC74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 418B2E8E2801BC7E00F8CC74 /* LaunchScreen.storyboard */; };
+		418B2E982801BD8200F8CC74 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418B2E972801BD8200F8CC74 /* NetworkManager.swift */; };
+		418B2E9A2801BD9400F8CC74 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418B2E992801BD9400F8CC74 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		418B2E8C2801BC7E00F8CC74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		418B2E8F2801BC7E00F8CC74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		418B2E912801BC7E00F8CC74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		418B2E972801BD8200F8CC74 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		418B2E992801BD9400F8CC74 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				418B2E8C2801BC7E00F8CC74 /* Assets.xcassets */,
 				418B2E8E2801BC7E00F8CC74 /* LaunchScreen.storyboard */,
 				418B2E912801BC7E00F8CC74 /* Info.plist */,
+				418B2E972801BD8200F8CC74 /* NetworkManager.swift */,
+				418B2E992801BD9400F8CC74 /* Model.swift */,
 			);
 			path = WeatherAppHW;
 			sourceTree = "<group>";
@@ -138,6 +144,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				418B2E9A2801BD9400F8CC74 /* Model.swift in Sources */,
+				418B2E982801BD8200F8CC74 /* NetworkManager.swift in Sources */,
 				418B2E882801BC7D00F8CC74 /* ViewController.swift in Sources */,
 				418B2E842801BC7D00F8CC74 /* AppDelegate.swift in Sources */,
 				418B2E862801BC7D00F8CC74 /* SceneDelegate.swift in Sources */,
