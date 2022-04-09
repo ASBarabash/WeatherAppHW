@@ -27,8 +27,6 @@ class ViewController: UIViewController {
                 Температура: \(weatherInMoscow?.current?.temp ?? 00) по цельсию.
                 """
         }
-    
     }
-
 }
 
