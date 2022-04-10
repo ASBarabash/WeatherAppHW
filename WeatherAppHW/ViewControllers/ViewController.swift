@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     
     private let weather = NetworkManager.shared
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         infoLabel.layer.cornerRadius = 10
@@ -26,7 +27,7 @@ class ViewController: UIViewController {
             
             self.infoLabel.text = """
                 Сегодня в
-                \(weatherInMoscow?.timezone ?? "") \(weatherInMoscow?.current?.weather?[0].description ?? "" )
+                \(weatherInMoscow?.timezone ?? "") \(weatherInMoscow?.current?.weather?[0].description ?? "")
                 Температура: \(weatherInMoscow?.current?.temp ?? 00) по цельсию.
                 """
         }
