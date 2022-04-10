@@ -16,13 +16,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Снимок экрана 2022-04-09 в 16.04.55" translatesAutoresizingMaskIntoConstraints="NO" id="Dkp-9S-9bd">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Снимок экрана 2022-04-09 в 16.04.55" translatesAutoresizingMaskIntoConstraints="NO" id="Dkp-9S-9bd">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oPl-BA-fTY">
-                                <rect key="frame" x="180" y="434.5" width="54.5" height="27.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="oPl-BA-fTY">
+                                <rect key="frame" x="16" y="430" width="382" height="36"/>
+                                <color key="backgroundColor" red="0.88520833080000005" green="0.88831978840000003" blue="0.89765416109999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" systemColor="systemPinkColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -30,10 +32,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Dkp-9S-9bd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6Sv-Mo-LIY"/>
-                            <constraint firstItem="oPl-BA-fTY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ch7-x9-BMt"/>
-                            <constraint firstItem="oPl-BA-fTY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Sn7-dP-DFQ"/>
+                            <constraint firstItem="oPl-BA-fTY" firstAttribute="centerY" secondItem="Dkp-9S-9bd" secondAttribute="centerY" id="7YM-vv-gUT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oPl-BA-fTY" secondAttribute="trailing" constant="16" id="OR2-cy-FGm"/>
                             <constraint firstItem="Dkp-9S-9bd" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="hVF-UA-y1D"/>
                             <constraint firstItem="Dkp-9S-9bd" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xtl-39-e1K"/>
+                            <constraint firstItem="oPl-BA-fTY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="yq3-x9-riv"/>
                             <constraint firstAttribute="bottom" secondItem="Dkp-9S-9bd" secondAttribute="bottom" id="z91-5o-efn"/>
                         </constraints>
                     </view>
@@ -50,6 +53,9 @@
         <image name="Снимок экрана 2022-04-09 в 16.04.55" width="1060" height="1860"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

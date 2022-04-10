@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        infoLabel.layer.cornerRadius = 10
+        infoLabel.layer.masksToBounds = true
         weather.fetchWeather { weatherInMoscow, error in
             if let error = error {
                 print(error)
@@ -23,7 +25,8 @@ class ViewController: UIViewController {
             }
             
             self.infoLabel.text = """
-                Сегодня в \(weatherInMoscow?.timezone ?? "") \(weatherInMoscow?.current?.weather?[0].description ?? "" )
+                Сегодня в
+                \(weatherInMoscow?.timezone ?? "") \(weatherInMoscow?.current?.weather?[0].description ?? "" )
                 Температура: \(weatherInMoscow?.current?.temp ?? 00) по цельсию.
                 """
         }
