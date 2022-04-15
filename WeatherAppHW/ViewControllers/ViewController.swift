@@ -12,16 +12,26 @@ class ViewController: UIViewController {
     
     @IBOutlet var infoLabel: UILabel!
     
-
+    
 //    private let weather = NetworkManager.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
         infoLabel.layer.cornerRadius = 10
         infoLabel.layer.masksToBounds = true
-        fetchWeatherWithAlamofire()
         
-         
+        NetworkManager.shared.fetchWeatherWithAlamofire { result in
+            switch result {
+            case .success(let weather):
+                self.infoLabel.text = """
+                Сегодня в
+                \(weather.timezone ?? "") \(weather.current?.weather?[0].description ?? "")
+                Температура: \(weather.current?.temp ?? 00)
+                """
+            case .failure(let error):
+                print(error)
+            }
+        }
 //Это старый вариант:
 //        weather.fetchWeather { weatherInMoscow, error in
 //            if let error = error {
@@ -36,23 +46,7 @@ class ViewController: UIViewController {
 //                """
 //        }
     }
-    func fetchWeatherWithAlamofire() {
-        AF.request(link)
-            .validate()
-            .responseJSON { dataResponse in
-                switch dataResponse.result {
-                case .success(let value):
-                    guard let weatherData = value as? [String: Any] else { return }
-                    guard let current = weatherData["current"] as? [String: Any] else { return }
-                    guard let weather = current["weather"] as? [[String: Any]] else { return }
-                    
-                    
-                    print(weather)
-                case .failure(let error):
-                    print(error)
-                }
-            }
-    }
+
 }
     
     

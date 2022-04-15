@@ -12,18 +12,20 @@ struct WeatherInMoscow: Codable {
     let timezone: String?
     let current: Current?
     
-    init(indication: [String: Any]) {
+    init(indication: Any) {
+        let weatherInMoscowData = indication as? [String: Any] ?? [:]
+        timezone = weatherInMoscowData["timezone"] as? String
 
-        timezone = indication["timezone"] as? String
-
-        let current = indication["current"] as? [String: Any] ?? [:]
-        self.current = Current(indication: current)
+        let currentData = weatherInMoscowData["current"] as? [String: Any] ?? [:]
+        current = Current(indication: currentData)
     }
     
-//    static func getWeatherInMoscow(from value: Any) -> WeatherInMoscow {
-//        
-//    }
+    static func getWeatherInMoscow(from value: Any) -> WeatherInMoscow {
+        return WeatherInMoscow(indication: value)
+        }
+        
 }
+
     
 struct Current: Codable {
     let temp: Double?
@@ -32,16 +34,17 @@ struct Current: Codable {
     init(indication: [String: Any]) {
         temp = indication["temp"] as? Double
 
-        let weather = indication["weather"] as? [String: Any] ?? [:]
-        self.weather = [Weather(indication: weather)]
+        let weatherData = indication["weather"] as? [[String: Any]] ?? [[:]]
+        weather = [Weather(indication: weatherData)]
     }
 }
 
 struct Weather: Codable {
     let description: String?
     
-    init(indication: [String: Any]) {
-        description = indication["description"] as? String
+    init(indication: [[String: Any]]) {
+        let weather = indication.first ?? [:]
+        description = weather["description"] as? String
     }
 }
 
